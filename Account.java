@@ -5,48 +5,39 @@ public class Account
 	private int accountNumber;
 	private String accountHolderName;
 	private double balance;
-
-	public void setAccountNumber (int accountNumber)
+	
+	public Account()
 	{
-		this.accountNumber=accountNumber;
+		System.out.println("Empty Account");
 	}
-	public float getAccountNumber()
+	public Account(int accountNumber, String accountHolderName, double balance)
 	{
-		return accountNumber;
+		System.out.println("Para Account");
+		this.accountNumber = accountNumber;
+		this.accountHolderName = accountHolderName;
+		this.balance = balance;
+	}
+	
+	public void setAccountNumber(int accountNumber)
+	{
+		this.accountNumber = accountNumber;
 	}
 	public void setAccountHolderName(String accountHolderName)
 	{
-		this.accountHolderName=accountHolderName;
+		this.accountHolderName = accountHolderName;
 	}
-	public String getAccountHolderName()
+	public void setBalance(double balance)
 	{
-		return accountHolderName;
+		this.balance = balance;
 	}
-	public void setBalance (double balance)
-	{
-		this.balance=balance;
-	}
-	public double getBalance()
-	{
-		return balance;
-	}	
-	public Account()
-	{
-		System.out.println("This is empty constructor");
-	}
-	public Account (int accountNumber, String accountHolderName, double balance)
-	{ 
-	System.out.println("This is parameterized constructor");
+	public int getAccountNumber(){return accountNumber;}
+	public String getAccountHolderName(){return accountHolderName;}
+	public double getBalance(){return balance;}
 	
-	this.accountNumber=accountNumber;
-	this.accountHolderName=accountHolderName;
-	this.balance=balance;
-	}
 	public void showDetails()
 	{
-		
-		System.out.println("The accountNumber is "+accountNumber+" ");
-		System.out.println("The accountHolderName is "+accountHolderName+" ");
-	    System.out.println("The balance is "+balance+" ");
+		System.out.println("Account Number: "+accountNumber);
+		System.out.println("Account Holder Name: "+accountHolderName);
+		System.out.println("Balance: "+balance);
 	}
-} 
+}

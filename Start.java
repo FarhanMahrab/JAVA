@@ -1,20 +1,31 @@
 import java.lang.*;
-public class Start 
+
+public class Start
 {
-	public static void main (String[] args)
+	public static void main(String []args)
 	{
-		Account a = new Account();
-        a.setAccountNumber(46983);
-        a.setAccountHolderName("FARHAN");
-		a.setBalance(69.96);
-		System.out.println("The Account number is "+a.getAccountNumber());
-
-		System.out.println("This Account Holder Name is "+a.getAccountHolderName());
-
-		System.out.println("This balance is "+a.getBalance());
-
-		Account a1= new Account(23331,"Alif",45.23);
-		a1.showDetails();
-
+		Account a1 = new Account();
+		a1.setAccountNumber(111111111);
+		a1.setAccountHolderName("OOP1 G");
+		a1.setBalance(2000.0);
+		
+		Customer c1 = new Customer();
+		c1.setPhnNumber("+88012345678890");
+		c1.setAccount(a1);
+		
+		c1.showDetails();
+		System.out.println("----------------------------------------");
+		Account a2 = new Account(22222222, "OOP1 C", 2500.0);
+		Customer c2 = new Customer("+88019876543221", a2);
+		
+		System.out.println("Customer PhnNumber: "+c2.getPhnNumber());
+		System.out.println("Customer Account Number: "+c2.getAccount().getAccountNumber());
+		System.out.println("Customer Account Holder Name: "+c2.getAccount().getAccountHolderName());
+		System.out.println("Customer Balance: "+c2.getAccount().getBalance());
+		
 	}
 }
+
+
+
+
